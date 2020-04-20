@@ -1,4 +1,490 @@
-﻿body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+﻿/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body,
+html {
+    height: 100%;
+}
+
+/*Set background image*/
+.container {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 1500px;
+    width: 100%;
+}
+
+#index.container {
+    background-image: url(../img/HotJupiter.jpg);
+}
+
+#impact.container {
+    background-image: url(../img/earthimpact.jpg);
+}
+
+#fireball.container {
+    background-image: url(../img/fireball.jpg);
+}
+
+#aboutus.container {
+    background-image: url(../img/universe.jpg);
+}
+
+.container2 {
+    background-color: transparent;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    position: absolute;
+    height: 300%;
+    top: 67%;
+    width: 99%;
+}
+
+#constellation.container2 {
+    background-image: url(../img/constellation.jpg);
+}
+
+#duopic.container2 {
+    background-image: url(../img/profilepic.png);
+    left: 0%;
+}
+
+.container3 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    position: absolute;
+    height: 1500px;
+    width: 50%;
+    transform: rotate(90deg);
+}
+/*
+    #Dan.container3 {
+        background-image: url(../img/Danpic.jpeg);
+    }*/
+
+.pgheader {
+    width: 75%;
+    background-image: url(../img/titlefadebar.png);
+    font-family: 'Agency FB';
+    text-align: left;
+    font-size: 4.5vw;
+    color: silver;
+    margin-top: .5vw;
+}
+
+.pgheader2 {
+    background-image: url(../img/titlefadebar.png);
+    position: absolute;
+    left: 11%;
+    top: 21%;
+    font-family: 'Agency FB';
+    text-align: center;
+    font-size: 3vw;
+    color: black;
+    margin-top: .5vw;
+    width: 75%;
+}
+
+.pgheader3 {
+    width: fit-content;
+    position: absolute;
+    top: 23%;
+    left: 16%;
+    background-image: url(../img/pinkbar.png);
+    font-family: 'Agency FB';
+    text-align: left;
+    font-size: 3.5vw;
+    color: silver;
+    margin-top: .5vw;
+}
+
+.menu {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: fit-content;
+    font-size: 1.75vw;
+    left: 0;
+}
+
+    .menu ul {
+        position: relative;
+        text-align: left;
+        font-weight: 600;
+        list-style-type: none;
+        font-family: 'Agency FB';
+        padding-inline-start: 10px;
+        width: auto;
+    }
+
+    .menu li {
+        float: left;
+        padding: 0px 16px;
+    }
+
+        .menu li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+/*email signup on home*/
+.signup {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    width: 20vw;
+    font-size: 1.4vw;
+    background-color: coral;
+    text-align: center;
+}
+
+    .signup label {
+        font-size: 1vw;
+        text-align: left;
+        font-weight: 800;
+    }
+
+    .signup input {
+        font-size: 1.25vw;
+        padding: 1px;
+        margin-bottom: 3px;
+    }
+
+/* slide show on home*/
+.slidecontainer {
+    background-color: black;
+    position: absolute;
+    left: 18%;
+    top: 22%;
+    height: 65%;
+    width: 65%;
+}
+
+.slide {
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+}
+
+.slidecap {
+    position: absolute;
+    top: 30%;
+    font-size: 2.5vw;
+    background-color: darkgray;
+    opacity: 75%;
+    text-align: center;
+    display: none;
+}
+
+.displaycap {
+    display: block;
+    width: 100%;
+    background-color: darkgray;
+}
+
+.slidedot {
+    text-align: center;
+    position: relative;
+    top: -5%;
+    right: 5%;
+}
+
+.dot {
+    cursor: pointer;
+    position: relative;
+    height: .5vw;
+    width: .5vw;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 35%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: red;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2%;
+    margin-top: -22px;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.sendescrip {
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 1.5vw;
+    opacity: 85%;
+    top: 15%;
+    left: 15%;
+    width: 65%;
+    background-color: lightgray;
+}
+/*Sentry*/
+table.sentry {
+    position: absolute;
+    text-align: center;
+    width: 65%;
+    left: 15%;
+    top: 30%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-color: black;
+    background-color: lightgrey;
+    opacity: 55%;
+}
+
+.sentry tr {
+    padding: 5px;
+    font-size: 1.5vw;
+    fill-opacity: 55%;
+}
+
+#nxt.sentry {
+    position: absolute;
+    top: 28%;
+    left: 15%;
+    font-size: 1.25vw;
+}
+
+    #nxt.sentry:hover {
+        cursor: pointer;
+    }
+
+#prev.sentry {
+    position: absolute;
+    top: 28%;
+    left: 71%;
+    font-size: 1.25vw;
+}
+
+    #prev.sentry:hover {
+        cursor: pointer;
+    }
+
+.footer {
+    top: 94%;
+    left: 19%;
+    text-align: center;
+    width: auto;
+    position: absolute;
+    font-size: 1.25vw;
+    font-style: italic;
+}
+
+#impact.footer {
+    color: white;
+}
+
+#fireball.footer {
+    color: white;
+}
+/*fireball table*/
+table.fireball {
+    position: absolute;
+    text-align: center;
+    width: 65%;
+    left: 15%;
+    top: 30%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-color: cornflowerblue;
+    background-color: lightblue;
+    opacity: 80%;
+}
+
+.fireball tr {
+    padding: 5px;
+    font-size: 1.5vw;
+    fill-opacity: 60%;
+}
+
+.scatterclass {
+    height: 75%;
+    width: 80%;
+}
+
+#nxt.fireball {
+    position: absolute;
+    top: 68%;
+    left: 15%;
+    font-size: 1.35vw;
+}
+
+    #nxt.fireball:hover {
+        cursor: cell;
+    }
+
+#prev.fireball {
+    position: absolute;
+    top: 68%;
+    left: 85%;
+    font-size: 1.35vw;
+}
+
+    #prev.fireball:hover {
+        cursor: cell;
+    }
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 100%;
+    }
+
+    #duopic.container2 {
+        position: absolute;
+        width: 50%;
+        top: 58%;
+        left: 25%;
+    }
+
+    .menu {
+        top: 0;
+        left: 0;
+    }
+
+        .menu ul {
+            font-weight: 300;
+        }
+
+        .menu li {
+            float: none;
+        }
+
+    .slidecontainer {
+        position: absolute;
+        top: 13%;
+        left: 7.5%;
+        width: 85%;
+        background-color: transparent;
+    }
+
+    .slide {
+        width: auto;
+        height: 500px;
+    }
+
+    .displaycap {
+        font-size: small;
+    }
+
+    .footer {
+        top: 90%;
+    }
+
+    .slidedot {
+        text-align: center;
+        position: relative;
+        top: -5%;
+        right: 5%;
+    }
+
+    .dot {
+        cursor: pointer;
+        position: relative;
+        height: .5vw;
+        width: .5vw;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 35%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active {
+        background-color: red;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 2%;
+        margin-top: -22px;
+        color: lightgray;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    /*Header of fireball impact*/
+    .textfireball {
+        background-color: black;
+        position: absolute;
+        left: 18%;
+        top: 20%;
+        height: 65%;
+        width: 65%;
+    }
+
+    table.fireball {
+        width: 100%;
+        left: 0%;
+    }
+
+    .fireball tr {
+        padding: 5px;
+        font-size: 1.5vw;
+        fill-opacity: 60%;
+    }
+
+    .scatterclass {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*about us table*/
+    table.aboutus {
+        position: absolute;
+        text-align: center;
+        width: 65%;
+        left: 15%;
+        top: 78%;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        border-color: black;
+        background-color: bisque;
+        opacity: 100%;
+    }
+
+    .aboutus tr {
+        padding: 5px;
+        font-size: 1.5vw;
+        fill-opacity: 55%;
+    }
 }

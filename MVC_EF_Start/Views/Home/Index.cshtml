@@ -1,15 +1,82 @@
-﻿@{
+﻿@model Person
+
+@{
+    ViewData["Title"] = "Index";
     Layout = null;
 }
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="js/main.js"></script>
+    <title>Home Page</title>
 </head>
 <body>
-  <h2>Hello World!</h2>
+    <div id="index" class="container">
+        <div class="pgheader"> Welcome to the End of the World!</div>
+        <div class="menu">
+            <ul class="menu">
+                <li><a href="index.html">TAKE ME TO YOUR LEADER</a></li>
+                <li><a href="ImpactData.html">Potential Impact Data</a></li>
+                <li><a href="Fireballimpact.html">Fireballs that impact the Earth</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="signup">
+            Sign up for our weekly newsletter to stay informed on the latest planetary destruction news!
+            <form class="signform" method="post" asp-action="signup">
+                <label asp-for="fname">First Name:</label><br />
+                <input asp-for="fname"/>
+                <!--<input type="text" id="fname" name="fname" required /><br />-->
+                <label asp-for="lname">Last Name:</label><br />
+                <input asp-for="lname" />
+                <label asp-for="email">Email Address:</label><br />
+                <input asp-for="email" />
+                <!--<input type="submit" value="Submit" onclick="SignConf()">-->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="slidecontainer">
+            <div class="slide" style="background-image:url(img/Picture1.jpg)    ">
+                <p class="slidecap displaycap">
+                    What would your do if you knew tomorrow was the end of the world?
+                    Knowing is half the battle! Track space objects destined for Earth
+                    so you aren't caught unaware!
+                </p>
+                <p class="slidecap">
+                    Asteriods and Comets are not the same! Asteroids are much larger, have stable surfaces
+                    and do not have the ice content that comets posses. For more information on the
+                    differences between the two see
+                    <a href="https://spaceplace.nasa.gov/review/posters/stardust/comets-vs-asteroids.pdf"
+                       target="_blank"> more information</a> from the folks at NASA.
+                </p>
+                <p class="slidecap">
+                    It is now believed that the distruction of the Biblical cities of Sodom and Gomorrah
+                    were caused by an asteroid. Scientists believe that the impact resulted in a blast
+                    that was more powerful than a nuclear bomb! Yikes!!!
+                </p>
+            </div>
+            <div class="slidedot">
+                <span class="dot active" onclick="dotslide(1)"></span>
+                <span class="dot" onclick="dotslide(2)"></span>
+                <span class="dot" onclick="dotslide(3)"></span>
+            </div>
+            <a class="next" onclick="nxtslide(1)">❯</a>
+            <a class="prev" onclick="nxtslide(-1)">❮</a>
+        </div>
+        <div id="index" class="footer">
+            This website is for entertainment purposes only and its sole purpose
+            is to serve as fulfillment for USF MS BAIS requirements.
+            <br />
+            This picture is fictional and represents Jupiter colliding with the sun.
+            <br />
+        </div>
+    </div>
+
 </body>
 </html>
+
