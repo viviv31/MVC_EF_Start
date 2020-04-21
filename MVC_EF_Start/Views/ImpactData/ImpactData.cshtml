@@ -1,24 +1,25 @@
-﻿<!DOCTYPE html>
+﻿@model Sentry
+
+@{
+    ViewData["Title"] = "ImpactData";
+}
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <script src="js/main.js"></script>
     <title>Potential Impact Data</title>
 </head>
 <body>
     <div id="impact" class="container">
         <div class="pgheader">Potential Earth Impact Data</div>
-        <div class="menu">
-            <ul class="menu">
-                <li><a href="index.html">TAKE ME TO YOUR LEADER</a></li>
-                <li><a href="ImpactData.html">Potential Impact Data</a></li>
-                <li><a href="Fireballimpact.html">Fireballs that impact the Earth</a></li>
-                <li><a href="Aboutus.html">About Us</a></li>
-            </ul>
-        </div>
+
+        @{ 
+            Html.RenderPartial("_Menu");
+        }
+
         <div class="sendescrip">
             The following table lists all the future Earth impact
             events that the <a href="https://cneos.jpl.nasa.gov/sentry/">JPL Sentry System</a>

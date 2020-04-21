@@ -8,8 +8,7 @@ namespace MVC_EF_Start.DataAccess
   {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-    public DbSet<Company> Companies { get; set; }
-    public DbSet<Equity> Equities { get; set; }
     public DbSet<Sentry> SentryEntries { get; set; }
+    public DbSet<Person> People { get; set; }
   }
 }

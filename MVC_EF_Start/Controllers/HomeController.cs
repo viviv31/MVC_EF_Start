@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MVC_EF_Start.Controllers
 {
-  public class HomeController : Controller
-  {
+    public class HomeController : Controller
+    {
         public ApplicationDbContext dbContext;
 
         public HomeController(ApplicationDbContext context)
@@ -18,13 +18,24 @@ namespace MVC_EF_Start.Controllers
             dbContext = context;
         }
 
-        //Base URL for the IEXTrading API. Method specific URLs are appended to this base URL.
-        string BASE_URL = "https://api.iextrading.com/1.0/";
-        HttpClient httpClient;
-
         public IActionResult Index()
         {
+            Sentry();
             return View();
+        }
+
+        public PartialViewResult SignUp()
+        {
+            Person myperson = new Person();
+            return PartialView("_SignUpForm");
+        }
+
+        [HttpPost]
+        public IActionResult SignUp(Person myperson)
+        {
+            dbContext.People.Add(myperson);
+            dbContext.SaveChanges();
+            return View("Index");
         }
 
         public IActionResult Sentry()
@@ -41,6 +52,11 @@ namespace MVC_EF_Start.Controllers
             dbContext.SaveChanges();
 
             return View(sentryData);
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
         }
     }
 }

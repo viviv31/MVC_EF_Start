@@ -37,12 +37,4 @@ namespace MVC_EF_Start.Models
         public string id { get; set; }
         public string des { get; set; }
     }
-
-    public class Person
-    {
-        int personID { get; set; }
-        string fname { get; set; }
-        string lname { get; set;}
-        string email { get; set; }
-    }
 }

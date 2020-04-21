@@ -48,7 +48,13 @@ function SignConf() {
         alert('Please enter a first name')
         return;
     }
+    
+
     alert('Thanks ' + name + ' for signing up for our life-saving monthly email!')
+}
+
+function updatedb() {
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {

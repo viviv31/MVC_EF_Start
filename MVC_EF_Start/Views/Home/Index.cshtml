@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = null;
+
 }
 
     <!DOCTYPE html>
@@ -11,35 +11,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <script src="js/main.js"></script>
     <title>Home Page</title>
 </head>
 <body>
     <div id="index" class="container">
         <div class="pgheader"> Welcome to the End of the World!</div>
-        <div class="menu">
-            <ul class="menu">
-                <li><a href="index.html">TAKE ME TO YOUR LEADER</a></li>
-                <li><a href="ImpactData.html">Potential Impact Data</a></li>
-                <li><a href="Fireballimpact.html">Fireballs that impact the Earth</a></li>
-                <li><a href="Aboutus.html">About Us</a></li>
-            </ul>
-        </div>
-        <div class="signup">
-            Sign up for our weekly newsletter to stay informed on the latest planetary destruction news!
-            <form class="signform" method="post" asp-action="signup">
-                <label asp-for="fname">First Name:</label><br />
-                <input asp-for="fname"/>
-                <!--<input type="text" id="fname" name="fname" required /><br />-->
-                <label asp-for="lname">Last Name:</label><br />
-                <input asp-for="lname" />
-                <label asp-for="email">Email Address:</label><br />
-                <input asp-for="email" />
-                <!--<input type="submit" value="Submit" onclick="SignConf()">-->
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+
+        @{
+            Html.RenderPartial("_Menu");
+        }
+
+
+        @{ 
+            Html.RenderPartial("_SignUpForm");
+        }
+        
         <div class="slidecontainer">
             <div class="slide" style="background-image:url(img/Picture1.jpg)    ">
                 <p class="slidecap displaycap">
