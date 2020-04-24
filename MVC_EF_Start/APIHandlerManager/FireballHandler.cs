@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using static MVC_EF_Start.Models.Fireball;
-using MVC_EF_Start.Models;
-using MVC_EF_Start.DataAccess;
-using Newtonsoft.Json;
 using System.Net.Http;
+using MVC_EF_Start.Models;
+using Newtonsoft.Json;
 
 
 namespace MVC_EF_Start.APIHandlerManager
